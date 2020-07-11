@@ -10,7 +10,10 @@
 10. Now add all the -ve value array which result in expense section                                 - Done
 11. And dislay expense in DOM                                                                       - Done
 12. Remove the input transaction when user doesnt need                                              - Done
-13 Update the balance, income and expense                                                           - 
+13 Update the balance, income and expense                                                           - Done 
+14 Add to local storage                                                                             - Done
+15. Update Local storage                                                                            - Done
+16. Delete from local storage                                                                       - Done
 
 
 
