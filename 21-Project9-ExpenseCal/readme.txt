@@ -9,4 +9,8 @@
 9. And dislay income in DOM                                                                         - Done
 10. Now add all the -ve value array which result in expense section                                 - Done
 11. And dislay expense in DOM                                                                       - Done
-12. Remove the input transaction when user doesnt need                                              -
+12. Remove the input transaction when user doesnt need                                              - Done
+13 Update the balance, income and expense                                                           - 
+
+
+

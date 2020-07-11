@@ -2,104 +2,70 @@ const inputText = document.getElementById('text'),
     inputAmount = document.getElementById('amount'),
     form = document.getElementById('form'),
     list = document.getElementById('list'),
-    deleteBtn = document.querySelector('delete-btn'),
+    deleteBtn = document.querySelector('.delete-btn'),
     balanceValue = document.getElementById('balance'),
     incomeValue = document.getElementById('money-plus'),
-    expenseValue = document.getElementById('money-minus');
-
+    expenseValue = document.getElementById('money-minus'),
+    tasks = document.getElementById('list'),
+    container = document.querySelector('.container');
 
 //Event Listners
 form.addEventListener('submit', e => {
     e.preventDefault();
-   
     updateTransactions();
+});
 
+tasks.addEventListener('click', function(e) {
+    if (e.target.classList.contains('delete-btn')) {
+        let txt = e.target.parentElement.children[0].textContent;
+        let expt = e.target.parentElement.firstChild.textContent;
+        if(txt < 0) {
+              // Assingin variable a to the input value and delete it from expense array
+            let deleteexp = txt;
+            let b = inc.indexOf(deleteexp);
+            exp.splice(b, 1);
+        } else {
+              // Assingin variable a to the input value and delete it from income array
+            let deleteinc = txt;
+            let b = inc.indexOf(deleteinc);
+            inc.splice(b, 1);
+        }    
+        // Assingin variable a to the input value and delete it from balance array
+        let a = bal.indexOf(txt);
+        bal.splice(a, 1);
+        e.target.parentElement.remove();
+        calculateValues();
+        removeFromLocalStorage(expt.trim());   
+    }
+    e.preventDefault();
 });
 
 //Assigning an empty array to get the input values      
-const bal = [0];
-const exp = [0];
-const inc = [0];
-const text1 = [];
-const idEl =[];
-
-let tab = document.createElement('li');
-let gentID = Math.round(Math.random() * 1000);
+let bal = [0];
+let exp = [0];
+let inc = [0];
 
 //Update Input values to list/History tab
 function updateTransactions() {
     
     //assiging the input amount to sign to check + & -ve values
     let sign = amount.value;
-    let textin = text.value;
+    let texts = text.value;
 
     if(text.value === '') {
         alert('Please enter the text for Transaction');
     } else if (amount.value === '') {
         alert('Please enter the sum for Transaction');
     } else {
-
-
     //creating an li element 
     tab = document.createElement('li');
     //Adding minus or plus to created li 
     tab.classList.add(sign < 0 ? 'minus' : 'plus');
-    
-    gentID = Math.floor(Math.random() * 100000000);
-    idEl.push(gentID);
-    console.log(idEl);
-    //Adding HTML to be inplemented under histroy tab
-    tab.innerHTML = `
-     ${text.value} <span>${sign}</span>
-     <button class="delete-btn" onclick="removeTransaction(${gentID})">x</button>
-    `;
-
-    list.appendChild(tab);
-
-    // const button = document.querySelector('delete-btn');
-    // button.onclick = function () { Myfucntion() };
-    // function Myfucntion() {
-    //     console.log(gentID);
-    //     console.log('arr' , idEl);
-    //     let a = idEl.indexOf(gentID);
-    //     console.log(a);
-    //     list.removeChild(list.childNodes[a]);
-    // };
-    }
-
-    calBalance();
-    // removeTransaction(gentID);
-}
-
-function removeTransaction(gentID){
-    console.log(gentID); onclick="removeTransaction(${gentID})"
-    console.log('arr' , idEl);
-    let a = idEl.indexOf(gentID);
-    console.log(a);
-    list.removeChild(list.childNodes[a]); 
-}
-
-
-function calBalance() {
-
-    if(text.value === '') {
-        // alert('Please enter the text for Transaction');
-    } else if (amount.value === '') {
-        // alert('Please enter the sum for Transaction');
-    } else {
     //Assiging the input values to a variable 
     const balance = amount.value;
-    console.log(balance);
     // pushin the variable to array
     bal.push(parseInt(amount.value));
-    console.log(bal);
 
-    //Calculating the values of 
-    const total = bal.reduce(function(a, b){
-        return a + b;
-    });
-
-    //Income or expense 
     if(amount.value < 0) {
         // expense calculating and pushin into array
         const expense = amount.value;
@@ -110,26 +76,103 @@ function calBalance() {
         const income = amount.value;
         inc.push(parseInt(income));
     }
+    //Adding HTML to be inplemented under histroy tab
+    tab.innerHTML = `
+     ${text.value} <span>${sign}</span>
+     <button class="delete-btn" >x</button>
+    `;
+    list.appendChild(tab);
+    }
+    localStore(texts, sign);
+    calculateValues();
+    text.value = '';
+    amount.value = '';
+}
 
+function calculateValues() {
+    //Calculating the values of 
+    const total = bal.reduce(function(a, b){
+        return a + b;
+    });
     const incm = inc.reduce(function(a, b){
         return a + b;
     });
     const expe = exp.reduce(function(a, b){
         return a + b;
     });
-
-    console.log('total: ', total);
-    console.log('income: ', incm);
-    console.log('expnse: ', expe);
-
     balanceValue.innerText = `$${total}`;
     incomeValue.innerText = `$${incm}`;
     expenseValue.innerText = `$${expe}`;
+}
 
-    text.value = '';
-    amount.value = '';
+// Local storage 
+//Add to Local storage
+function localStore(text, amount) {
+    let inputentries;
+    if (localStorage.getItem('inputentries') === null) {
+        inputentries = [];
+    } else {
+        inputentries = JSON.parse(localStorage.getItem('inputentries'));
+    }
+    inputentries.push({ inputText: text, value: amount });
+    localStorage.setItem('inputentries', JSON.stringify(inputentries));
 }
+
+// Get from local storage 
+function getFromLocalStore() {
+    let getItems;
+
+    if (localStorage.getItem('inputentries') === null) {
+        getItems = [];
+    } else {
+        getItems = JSON.parse(localStorage.getItem('inputentries'));
+    }
+    getItems.forEach(data => {
+        tab = document.createElement('li');
+        tab.classList.add(data.value < 0 ? 'minus' : 'plus');
+        sign = data.value;
+
+        // pushin the variable to array
+        bal.push(parseInt(data.value));
+        if(data.value < 0) {
+            // expense calculating and pushin into array
+            const expense = data.value;
+            exp.push(parseInt(expense));
+            
+        } else {
+            // income calculating and pushin into array
+            const income = data.value;
+            inc.push(parseInt(income));
+        }
+        //Adding HTML to be inplemented under histroy tab
+        tab.innerHTML = `
+        ${data.inputText} <span>${sign}</span>
+        <button class="delete-btn" >x</button>
+        `;
+        list.appendChild(tab);
+        calculateValues();
+        });
 }
+
+getFromLocalStore();
+
+//Delete from local stroage 
+function removeFromLocalStorage(inputtext) {
+    let inputentries;
+    if (localStorage.getItem('inputentries') === null) {
+        inputentries = [];
+    } else {
+        inputentries = JSON.parse(localStorage.getItem('inputentries'));
+    }
+    inputentries.forEach((data, index) => {  
+        if (data.inputText === inputtext) {
+            inputentries.splice(index, 1);
+        }
+    })
+    localStorage.setItem('inputentries', JSON.stringify(inputentries));
+}
+
+
 
 
 
