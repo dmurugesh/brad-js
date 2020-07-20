@@ -12,24 +12,46 @@ body{
     display: flex;
     justify-content: center;
     margin: 35px;
+    padding: 05px;
+    background-color: rgb(180, 190, 190);
+}
+
+.newLine{
+    display: block;
+}
+
+#caps{
+    display: none;
+    justify-content: center;
+    margin: 5px 100px;
+    border-radius: 10ch;
 }
 
 #input-text{
     width: 600px;
     height: 200px;
     padding: 5px;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .keyboard-horozintal-one{
     display: flex;
     justify-content: center;
+    margin: 5px 100px;
+    border-radius: 10ch;
 }
 
 .keyboard-horozintal-one > div{
-    margin: 10px 15px!important;
+    margin: 7px 12px!important;
     font-size: 31px;
     background-color: cadetblue;
+    cursor: pointer;
+}
+
+.a{
+    font-size: 23px;
+    position: relative;
+    bottom: 2px;
 }
 
 .words{
@@ -38,4 +60,14 @@ body{
     padding: 2px;
     text-align: center;
     border-radius: 10ch;
+}
+
+.tap{
+    display: flex;
+    justify-content: center;
+    margin: 20px 320px;
+    border: 2px solid cadetblue;
+    border-radius: 10ch;
+    padding: 5px;
+    cursor: pointer;
 }
