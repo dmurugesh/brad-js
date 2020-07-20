@@ -11,9 +11,9 @@ body{
 .input-container{
     display: flex;
     justify-content: center;
-    margin: 35px;
+    margin: 20px 35px;
     padding: 05px;
-    background-color: rgb(180, 190, 190);
+    /* background-color: rgb(180, 190, 190); */
 }
 
 .newLine{
@@ -24,42 +24,50 @@ body{
     display: none;
     justify-content: center;
     margin: 5px 100px;
-    border-radius: 10ch;
+    /* border-radius: 10ch; */
+}
+
+.fa-backspace{
+    font-size: 27px;
 }
 
 #input-text{
-    width: 600px;
+    width: 750px;
     height: 200px;
     padding: 5px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .keyboard-horozintal-one{
     display: flex;
     justify-content: center;
-    margin: 5px 100px;
+    margin: 5px 320px;
     border-radius: 10ch;
 }
 
 .keyboard-horozintal-one > div{
-    margin: 7px 12px!important;
+    margin: 5px 3px!important;
     font-size: 31px;
     background-color: cadetblue;
     cursor: pointer;
 }
 
-.a{
+#capslock-button{
+    border-width: 3px;
+    border-color: black;
+}
+/* .a{
     font-size: 23px;
     position: relative;
     bottom: 2px;
-}
+} */
 
 .words{
     border: 1px solid black;
-    width: 40px;
-    padding: 2px;
+    width: 50px;
+    padding: 2px 11px;
     text-align: center;
-    border-radius: 10ch;
+    /* border-radius: 10ch; */
 }
 
 .tap{

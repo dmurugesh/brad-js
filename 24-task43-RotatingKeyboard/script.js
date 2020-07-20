@@ -1,37 +1,35 @@
+// assigning variable 
 const tapBtn = document.querySelector('.tap');
 const screen = document.querySelector('.input-container');
 const inputEl = document.getElementById('input-text');
 
-
-// Add Eventlistiner
-// document.addEventListener('DOMContentLoaded', backgroundSec);
-// tapBtn.addEventListener('click', backgroundSec);
-// tapBtn.addEventListener('click', timerCan);
+// Assigning variables
 let tap = 0;
-let previousTap = 0;
 let display = [];
 let display2 = [];
 let dis;
+var isCapsOn = false;
+var cappsTapped = 0;
+let t1, t2, t3, t4, t5, t6;
 
+// To record each and every click function
 const clicked = () => {
     if (tap === 0) {
         backgroundSec();
         console.log(tap);
         tap++;
-        // previousTap = tap;
     } else {
-        timerCan(); 
+        timerCan();
         console.log(tap);
         tap++;
-        // previousTap = tap;
     }
 }
 
+//Add Evnetlistiner
 tapBtn.addEventListener("click", clicked);
 
 
-let t1,t2,t3,t4,t5,t6;
-
+//Function BackgroundSec is used to select elements in rowise
 function backgroundSec() {
     document.querySelector('.one').style.backgroundColor = 'Green';
     document.querySelector('.two').style.backgroundColor = 'transparent';
@@ -59,7 +57,7 @@ function backgroundSec3() {
     document.querySelector('.four').style.backgroundColor = 'transparent';
     document.querySelector('.five').style.backgroundColor = 'transparent';
     document.querySelector('.six').style.backgroundColor = 'transparent';
-    t3 = setTimeout("backgroundSec4()", 2000); 
+    t3 = setTimeout("backgroundSec4()", 2000);
 }
 
 function backgroundSec4() {
@@ -69,7 +67,7 @@ function backgroundSec4() {
     document.querySelector('.three').style.backgroundColor = 'transparent';
     document.querySelector('.five').style.backgroundColor = 'transparent';
     document.querySelector('.six').style.backgroundColor = 'transparent';
-    t4 = setTimeout("backgroundSec5()", 2000);  
+    t4 = setTimeout("backgroundSec5()", 2000);
 }
 
 function backgroundSec5() {
@@ -79,7 +77,7 @@ function backgroundSec5() {
     document.querySelector('.three').style.backgroundColor = 'transparent';
     document.querySelector('.four').style.backgroundColor = 'transparent';
     document.querySelector('.six').style.backgroundColor = 'transparent';
-    t5 = setTimeout("backgroundSec6()", 2000);  
+    t5 = setTimeout("backgroundSec6()", 2000);
 }
 
 function backgroundSec6() {
@@ -89,11 +87,72 @@ function backgroundSec6() {
     document.querySelector('.two').style.backgroundColor = 'transparent';
     document.querySelector('.three').style.backgroundColor = 'transparent';
     document.querySelector('.four').style.backgroundColor = 'transparent';
-    t6 = setTimeout("backgroundSec()", 2000);  
+    t6 = setTimeout("backgroundSec()", 2000);
 }
 
-// 2 
+function backgroundUpSec() {
+    document.querySelector('.one').style.backgroundColor = 'Green';
+    document.querySelector('.two').style.backgroundColor = 'transparent';
+    document.querySelector('.three').style.backgroundColor = 'transparent';
+    document.querySelector('.four').style.backgroundColor = 'transparent';
+    document.querySelector('.five').style.backgroundColor = 'transparent';
+    document.querySelector('.six').style.backgroundColor = 'transparent';
+    t1 = setTimeout("backgroundUpSec6()", 2000);
+}
 
+function backgroundUpSec2() {
+    document.querySelector('.two').style.backgroundColor = 'Green';
+    document.querySelector('.one').style.backgroundColor = 'transparent';
+    document.querySelector('.three').style.backgroundColor = 'transparent';
+    document.querySelector('.four').style.backgroundColor = 'transparent';
+    document.querySelector('.five').style.backgroundColor = 'transparent';
+    document.querySelector('.six').style.backgroundColor = 'transparent';
+    t2 = setTimeout("backgroundUpSec()", 2000);
+}
+
+function backgroundUpSec3() {
+    document.querySelector('.three').style.backgroundColor = 'Green';
+    document.querySelector('.one').style.backgroundColor = 'transparent';
+    document.querySelector('.two').style.backgroundColor = 'transparent';
+    document.querySelector('.four').style.backgroundColor = 'transparent';
+    document.querySelector('.five').style.backgroundColor = 'transparent';
+    document.querySelector('.six').style.backgroundColor = 'transparent';
+    t3 = setTimeout("backgroundUpSec2()", 2000);
+}
+
+function backgroundUpSec4() {
+    document.querySelector('.four').style.backgroundColor = 'Green';
+    document.querySelector('.one').style.backgroundColor = 'transparent';
+    document.querySelector('.two').style.backgroundColor = 'transparent';
+    document.querySelector('.three').style.backgroundColor = 'transparent';
+    document.querySelector('.five').style.backgroundColor = 'transparent';
+    document.querySelector('.six').style.backgroundColor = 'transparent';
+    t4 = setTimeout("backgroundUpSec3()", 2000);
+}
+
+function backgroundUpSec5() {
+    document.querySelector('.five').style.backgroundColor = 'green';
+    document.querySelector('.one').style.backgroundColor = 'transparent';
+    document.querySelector('.two').style.backgroundColor = 'transparent';
+    document.querySelector('.three').style.backgroundColor = 'transparent';
+    document.querySelector('.four').style.backgroundColor = 'transparent';
+    document.querySelector('.six').style.backgroundColor = 'transparent';
+    t5 = setTimeout("backgroundUpSec4()", 2000);
+}
+
+function backgroundUpSec6() {
+    document.querySelector('.six').style.backgroundColor = 'green';
+    document.querySelector('.five').style.backgroundColor = 'transparent';
+    document.querySelector('.one').style.backgroundColor = 'transparent';
+    document.querySelector('.two').style.backgroundColor = 'transparent';
+    document.querySelector('.three').style.backgroundColor = 'transparent';
+    document.querySelector('.four').style.backgroundColor = 'transparent';
+    t6 = setTimeout("backgroundUpSec5()", 2000);
+}
+
+
+// 2 
+//TimerCan is use to clear the timeout function 
 function timerCan() {
     clearTimeout(t1);
     clearTimeout(t2);
@@ -106,7 +165,7 @@ function timerCan() {
 
 function rowSelection() {
     console.log("inside if")
-    if(document.querySelector('.one').style.backgroundColor === 'green') {
+    if (document.querySelector('.one').style.backgroundColor === 'green') {
         document.querySelector('.one').style.backgroundColor = 'transparent';
         v = '.one'
         backgroundRowSec(v);
@@ -146,7 +205,7 @@ function rowSelection() {
 let x = ['.one', '.two', '.three', '.four', '.five', '.six']
 
 function selectElement() {
-    x.forEach((data) => {  
+    x.forEach((data) => {
         if (document.querySelector(data).style.backgroundColor === 'transparent') {
             selectWord(data);
         }
@@ -162,57 +221,172 @@ function selectWord(v) {
         displayBeRow(before);
         tap = 0;
     } else if (document.querySelector(v).querySelector('.b').style.backgroundColor === 'red') {
-        display.push(document.querySelector(v).querySelector('.b').children[0].innerHTML);
-        display2.push(document.querySelector(v).querySelector('.b').children[0].innerHTML);
-        dis = display.join("");
-        inputEl.value = dis;
-        console.log(document.querySelector(v).querySelector('.b').children[0].innerHTML);
+        if (isCapsOn == false) {
+            cappsTapped = 0;
+            console.log("inside condition")
+            display.push(document.querySelector(v).querySelector('.b').children[0].innerHTML);
+            display2.push(document.querySelector(v).querySelector('.b').children[0].innerHTML);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(document.querySelector(v).querySelector('.b').children[0].innerHTML);
+            document.getElementById("input-text").focus();
+        }
+        else {
+            cappsTapped = 1;
+            var str = document.querySelector(v).querySelector('.b').children[0].innerHTML.toUpperCase()
+            display.push(str);
+            display2.push(str);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(str);
+            document.getElementById("input-text").focus();
+        }
+
         // displayEl();
     } else if (document.querySelector(v).querySelector('.c').style.backgroundColor === 'red') {
-        display.push(document.querySelector(v).querySelector('.c').children[0].innerHTML);
-        display2.push(document.querySelector(v).querySelector('.c').children[0].innerHTML);
-        dis = display.join("");
-        inputEl.value = dis;
-        console.log(document.querySelector(v).querySelector('.c').children[0].innerHTML);
+        if (isCapsOn == false) {
+            cappsTapped = 0;
+            display.push(document.querySelector(v).querySelector('.c').children[0].innerHTML);
+            display2.push(document.querySelector(v).querySelector('.c').children[0].innerHTML);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(document.querySelector(v).querySelector('.c').children[0].innerHTML);
+            document.getElementById("input-text").focus();
+        }
+        else {
+            cappsTapped = 1;
+            var str = document.querySelector(v).querySelector('.c').children[0].innerHTML.toUpperCase()
+            display.push(str);
+            display2.push(str);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(str);
+            document.getElementById("input-text").focus();
+        }
+
         // displayEl();
     } else if (document.querySelector(v).querySelector('.d').style.backgroundColor === 'red') {
-        display.push(document.querySelector(v).querySelector('.d').children[0].innerHTML);
-        display2.push(document.querySelector(v).querySelector('.d').children[0].innerHTML);
-        dis = display.join("");
-        inputEl.value = dis;
-        console.log(document.querySelector(v).querySelector('.d').children[0].innerHTML);
+        if (isCapsOn == false) {
+            cappsTapped = 0;
+            display.push(document.querySelector(v).querySelector('.d').children[0].innerHTML);
+            display2.push(document.querySelector(v).querySelector('.d').children[0].innerHTML);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(document.querySelector(v).querySelector('.d').children[0].innerHTML);
+            document.getElementById("input-text").focus();
+        }
+        else {
+            cappsTapped = 1;
+            var str = document.querySelector(v).querySelector('.d').children[0].innerHTML.toUpperCase()
+            display.push(str);
+            display2.push(str);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(str);
+            document.getElementById("input-text").focus();
+        }
         // displayEl();
     } else if (document.querySelector(v).querySelector('.e').style.backgroundColor === 'red') {
-        display.push(document.querySelector(v).querySelector('.e').children[0].innerHTML);
-        display2.push(document.querySelector(v).querySelector('.e').children[0].innerHTML);
-        dis = display.join("");
-        inputEl.value = dis;
-        console.log(document.querySelector(v).querySelector('.e').children[0].innerHTML);
+        if (isCapsOn == false) {
+            cappsTapped = 0;
+            display.push(document.querySelector(v).querySelector('.e').children[0].innerHTML);
+            display2.push(document.querySelector(v).querySelector('.e').children[0].innerHTML);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(document.querySelector(v).querySelector('.e').children[0].innerHTML);
+            document.getElementById("input-text").focus();
+        }
+        else {
+            cappsTapped = 1;
+            var str = document.querySelector(v).querySelector('.e').children[0].innerHTML.toUpperCase()
+            display.push(str);
+            display2.push(str);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(str);
+            document.getElementById("input-text").focus();
+        }
+
         // displayEl();
     } else if (document.querySelector(v).querySelector('.f').style.backgroundColor === 'red') {
-        display.push(document.querySelector(v).querySelector('.f').children[0].innerHTML);
-        display2.push(document.querySelector(v).querySelector('.f').children[0].innerHTML);
-        dis = display.join("");
-        inputEl.value = dis;
-        console.log(document.querySelector(v).querySelector('.f').children[0].innerHTML);
+        if (isCapsOn == false) {
+            cappsTapped = 0;
+            display.push(document.querySelector(v).querySelector('.f').children[0].innerHTML);
+            display2.push(document.querySelector(v).querySelector('.f').children[0].innerHTML);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(document.querySelector(v).querySelector('.f').children[0].innerHTML);
+            document.getElementById("input-text").focus();
+        }
+        else {
+            cappsTapped = 1;
+            var str = document.querySelector(v).querySelector('.f').children[0].innerHTML.toUpperCase()
+            display.push(str);
+            display2.push(str);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(str);
+            document.getElementById("input-text").focus();
+        }
         // displayEl();
     } else if (document.querySelector(v).querySelector('.g').style.backgroundColor === 'red') {
-        display.push(document.querySelector(v).querySelector('.g').children[0].innerHTML);
-        display2.push(document.querySelector(v).querySelector('.g').children[0].innerHTML);
-        dis = display.join("");
-        inputEl.value = dis;
-        console.log(document.querySelector(v).querySelector('.g').children[0].innerHTML);
+        if (isCapsOn == false) {
+            cappsTapped = 0;
+            display.push(document.querySelector(v).querySelector('.g').children[0].innerHTML);
+            display2.push(document.querySelector(v).querySelector('.g').children[0].innerHTML);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(document.querySelector(v).querySelector('.g').children[0].innerHTML);
+            document.getElementById("input-text").focus();
+        }
+        else {
+            cappsTapped = 1;
+            var str = document.querySelector(v).querySelector('.g').children[0].innerHTML.toUpperCase();
+            display.push(str);
+            display2.push(str);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(str);
+            document.getElementById("input-text").focus();
+        }
         // displayEl();
     } else if (document.querySelector('.six').querySelector('.h').style.backgroundColor === 'red') {
+        console.log("caps on")
+        if (cappsTapped == 0) {
+            isCapsOn = true;
+            document.querySelector('.six').querySelector('.h').style.borderWidth = "3px";
+            document.querySelector('.six').querySelector('.h').style.borderColor = "red";
+            upperCaseAlpha();
+        }
+        else {
+            isCapsOn = false;
+            lowerCaseAlpha();
+            document.querySelector('.six').querySelector('.h').style.borderColor = "black";
+        }
+
         // display.push(document.querySelector(v).querySelector('.h').children[0].innerHTML);
         // console.log(document.querySelector(v).querySelector('.h').children[0].innerHTML);
         // displayEl();
-     } else if (document.querySelector(v).querySelector('.h').style.backgroundColor === 'red') {
-        display.push(document.querySelector(v).querySelector('.h').children[0].innerHTML);
-        display2.push(document.querySelector(v).querySelector('.h').children[0].innerHTML);
-        dis = display.join("");
-        inputEl.value = dis;
-        console.log(document.querySelector(v).querySelector('.h').children[0].innerHTML);
+    } else if (document.querySelector(v).querySelector('.h').style.backgroundColor === 'red') {
+        if (isCapsOn == false) {
+            cappsTapped = 0;
+            display.push(document.querySelector(v).querySelector('.h').children[0].innerHTML);
+            display2.push(document.querySelector(v).querySelector('.h').children[0].innerHTML);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(document.querySelector(v).querySelector('.h').children[0].innerHTML);
+            document.getElementById("input-text").focus();
+        }
+        else {
+            cappsTapped = 1;
+            var str = document.querySelector(v).querySelector('.h').children[0].innerHTML.toUpperCase()
+            display.push(str);
+            display2.push(str);
+            dis = display.join("");
+            inputEl.value = dis;
+            console.log(str);
+            document.getElementById("input-text").focus();
+        }
         // displayEl();
     } else if (document.querySelector(v).querySelector('.i').style.backgroundColor === 'red') {
         let space = ` `;
@@ -221,18 +395,21 @@ function selectWord(v) {
         console.log(document.querySelector(v).querySelector('.i').children[0].innerHTML);
         dis = display.join("");
         inputEl.value = dis;
+        document.getElementById("input-text").focus();
         // displayEl();
-    } else if (document.querySelector(v).querySelector('.j').style.backgroundColor === 'red') {     
+    } else if (document.querySelector(v).querySelector('.j').style.backgroundColor === 'red') {
         dis = display.join("")
         inputEl.value = (dis.slice(0, -1));
         display = [];
         display.push(inputEl.value);
+        document.getElementById("input-text").focus();
     } else if (document.querySelector(v).querySelector('.k').style.backgroundColor === 'red') {
         let enter = String.fromCharCode(13);
         display.push(enter);
         display2.push(enter);
         dis = display.join("");
         inputEl.value = dis;
+        document.getElementById("input-text").focus();
         console.log(document.querySelector(v).querySelector('.k').children[0].innerHTML);
     } else if (document.querySelector(v).querySelector('.l').style.backgroundColor === 'red') {
         let next = v;
@@ -244,37 +421,99 @@ function selectWord(v) {
     // console.log('d',display);
 }
 
+//Use to display the uppcase characters
+function upperCaseAlpha() {
+    // document.querySelector('.six').querySelector('.h').style.backgroundColor = "yellow";
+    document.querySelector('.one').querySelector('.b').children[0].innerHTML = `A`;
+    document.querySelector('.one').querySelector('.c').children[0].innerHTML = `B`;
+    document.querySelector('.one').querySelector('.d').children[0].innerHTML = `C`;
+    document.querySelector('.one').querySelector('.e').children[0].innerHTML = `D`;
+    document.querySelector('.one').querySelector('.f').children[0].innerHTML = `E`;
+    document.querySelector('.one').querySelector('.g').children[0].innerHTML = `F`;
+    document.querySelector('.one').querySelector('.h').children[0].innerHTML = `G`;
+    document.querySelector('.two').querySelector('.b').children[0].innerHTML = `H`;
+    document.querySelector('.two').querySelector('.c').children[0].innerHTML = `I`;
+    document.querySelector('.two').querySelector('.d').children[0].innerHTML = `J`;
+    document.querySelector('.two').querySelector('.e').children[0].innerHTML = `K`;
+    document.querySelector('.two').querySelector('.f').children[0].innerHTML = `L`;
+    document.querySelector('.two').querySelector('.g').children[0].innerHTML = `M`;
+    document.querySelector('.two').querySelector('.h').children[0].innerHTML = `N`;
+    document.querySelector('.three').querySelector('.b').children[0].innerHTML = `O`;
+    document.querySelector('.three').querySelector('.c').children[0].innerHTML = `P`;
+    document.querySelector('.three').querySelector('.d').children[0].innerHTML = `Q`;
+    document.querySelector('.three').querySelector('.e').children[0].innerHTML = `R`;
+    document.querySelector('.three').querySelector('.f').children[0].innerHTML = `S`;
+    document.querySelector('.three').querySelector('.g').children[0].innerHTML = `T`;
+    document.querySelector('.three').querySelector('.h').children[0].innerHTML = `U`;
+    document.querySelector('.four').querySelector('.b').children[0].innerHTML = `V`;
+    document.querySelector('.four').querySelector('.c').children[0].innerHTML = `W`;
+    document.querySelector('.four').querySelector('.d').children[0].innerHTML = `X`;
+    document.querySelector('.four').querySelector('.e').children[0].innerHTML = `Y`;
+    document.querySelector('.four').querySelector('.f').children[0].innerHTML = `Z`;
+}
+
+// use to display lower case characters
+function  lowerCaseAlpha() {
+    document.querySelector('.one').querySelector('.b').children[0].innerHTML = `a`;
+    document.querySelector('.one').querySelector('.c').children[0].innerHTML = `b`;
+    document.querySelector('.one').querySelector('.d').children[0].innerHTML = `c`;
+    document.querySelector('.one').querySelector('.e').children[0].innerHTML = `d`;
+    document.querySelector('.one').querySelector('.f').children[0].innerHTML = `e`;
+    document.querySelector('.one').querySelector('.g').children[0].innerHTML = `f`;
+    document.querySelector('.one').querySelector('.h').children[0].innerHTML = `g`;
+    document.querySelector('.two').querySelector('.b').children[0].innerHTML = `h`;
+    document.querySelector('.two').querySelector('.c').children[0].innerHTML = `i`;
+    document.querySelector('.two').querySelector('.d').children[0].innerHTML = `j`;
+    document.querySelector('.two').querySelector('.e').children[0].innerHTML = `k`;
+    document.querySelector('.two').querySelector('.f').children[0].innerHTML = `l`;
+    document.querySelector('.two').querySelector('.g').children[0].innerHTML = `m`;
+    document.querySelector('.two').querySelector('.h').children[0].innerHTML = `n`;
+    document.querySelector('.three').querySelector('.b').children[0].innerHTML = `o`;
+    document.querySelector('.three').querySelector('.c').children[0].innerHTML = `p`;
+    document.querySelector('.three').querySelector('.d').children[0].innerHTML = `q`;
+    document.querySelector('.three').querySelector('.e').children[0].innerHTML = `r`;
+    document.querySelector('.three').querySelector('.f').children[0].innerHTML = `s`;
+    document.querySelector('.three').querySelector('.g').children[0].innerHTML = `t`;
+    document.querySelector('.three').querySelector('.h').children[0].innerHTML = `u`;
+    document.querySelector('.four').querySelector('.b').children[0].innerHTML = `v`;
+    document.querySelector('.four').querySelector('.c').children[0].innerHTML = `w`;
+    document.querySelector('.four').querySelector('.d').children[0].innerHTML = `x`;
+    document.querySelector('.four').querySelector('.e').children[0].innerHTML = `y`;
+    document.querySelector('.four').querySelector('.f').children[0].innerHTML = `z`;
+}
+
+
 function displayBeRow(before) {
-    if(v === '.one') {
+    if (v === '.one') {
         document.querySelector(v).querySelector('.a').style.backgroundColor = 'cadetblue';
-        backgroundSec6();
+        backgroundUpSec6();
         timerClearRow();
     } else if (v === '.two') {
         document.querySelector(v).querySelector('.a').style.backgroundColor = 'cadetblue';
-        backgroundSec();
+        backgroundUpSec();
         timerClearRow();
     } else if (v === '.three') {
         document.querySelector(v).querySelector('.a').style.backgroundColor = 'cadetblue';
-        backgroundSec2();
+        backgroundUpSec2();
         timerClearRow();
     } else if (v === '.four') {
         document.querySelector(v).querySelector('.a').style.backgroundColor = 'cadetblue';
-        backgroundSec3();
+        backgroundUpSec3();
         timerClearRow();
     } else if (v === '.five') {
-;        document.querySelector(v).querySelector('.a').style.backgroundColor = 'cadetblue';
-        backgroundSec4();
+        ; document.querySelector(v).querySelector('.a').style.backgroundColor = 'cadetblue';
+        backgroundUpSec4();
         timerClearRow();
     } else if (v === '.six') {
         document.querySelector(v).querySelector('.a').style.backgroundColor = 'cadetblue';
-        backgroundSec5();
+        backgroundUpSec5();
         timerClearRow();
     }
 }
 
 
 function displayNextRow(v) {
-    if(v === '.one') {
+    if (v === '.one') {
         document.querySelector(v).querySelector('.l').style.backgroundColor = 'cadetblue';
         backgroundSec2();
         timerClearRow();
@@ -291,7 +530,7 @@ function displayNextRow(v) {
         backgroundSec5();
         timerClearRow();
     } else if (v === '.five') {
-;        document.querySelector(v).querySelector('.l').style.backgroundColor = 'cadetblue';
+        ; document.querySelector(v).querySelector('.l').style.backgroundColor = 'cadetblue';
         backgroundSec6();
         timerClearRow();
     } else if (v === '.six') {
