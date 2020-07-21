@@ -26,7 +26,7 @@ const clicked = () => {
 }
 
 //Add Evnetlistiner
-tapBtn.addEventListener("click", clicked);
+window.addEventListener("click", clicked);
 
 
 //Function BackgroundSec is used to select elements in rowise

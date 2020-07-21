@@ -8,17 +8,16 @@ Done
 6. Use backspace to delete the last entered element in Screen
 7. Use enter to go to next row 
 8. Click down to select the element row wise from next row onwards  and repeat from point 3
-9. Click up to select the element  row wise from previous row onwards and repeat from point 3 
+9. Click up to select the element  row wise from previous row onwards and repeat same from point 3 
+10. Caplock functionality
 
 Not Done 
 --------
-10. Caplock functionality
-11. Final Alignment - HTML && CSS
+11. Final Alignment - HTML && CSS - Need to confirm with Allen 
 
 
 Flow of code 
 ------------
-
 BackgronudSec 
 timerCan
 rowselection
