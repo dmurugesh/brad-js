@@ -1,0 +1,30 @@
+Head first Learning principle 
+1. Make visuals 
+2. Use a conversational and personalized style
+3. Get the learner to think more deepls
+4. get - and keep the readers attention
+5. touch thier emotions
+
+what YOU can do to bend your brain into submission
+1. Slow down. The more you understand, the less you have to memorize
+2. Do the excercises, Write notes
+3. Read the there are No dumb question
+4. Make this the last think you read before bed. or at least the last challenging thing
+5. Drink water. Lots of it.
+6. Talk about it. Out loud.
+7. Listen to your brain.
+8. Feel something!
+9. Create something!
+10 Get Sleep.
+
+Chapter 1 - A quick dip into Javascript 
+
+Basics 
+1. Each statement ends in a semicolon
+2. A single line comment begins with two forward slashes. Comments are just notes to you or other developers about the code.They aren’t executed.
+3. Whitespace doesnt matter (almost everywhere).
+4.  Don’t use quotes around the boolean values true and false.
+5. Variables don’t have to be given a value when they are declared:
+	eg : var width;
+6.  JavaScript, unlike HTML markup, is case sensitive, meaning upper- and lowercase matters.The variable counter is different from the
+	eg: variable Counter.
