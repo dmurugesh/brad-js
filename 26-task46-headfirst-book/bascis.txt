@@ -28,3 +28,7 @@ Basics
 	eg : var width;
 6.  JavaScript, unlike HTML markup, is case sensitive, meaning upper- and lowercase matters.The variable counter is different from the
 	eg: variable Counter.
+
+
+doubt 
+
