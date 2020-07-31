@@ -1,2 +1,2 @@
 1. Page 47 pesudo code 
-2. what is difference b/w pesudo code and game logic
+2. var isNewUser = (status == "newuser"); in page 89.

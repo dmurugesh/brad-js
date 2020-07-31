@@ -148,12 +148,69 @@
 //     }
 // }
 
-function playTurn(player, location) {
-    points = 0;
-    if (location == 1) {
-    points = points + 100;
-    }
-    return points;
-   }
-   var total = playTurn("Jai", 1);
+// function playTurn(player, location) {
+//     points = 0;
+//     if (location == 1) {
+//     points = points + 100;
+//     }
+//     return points;
+//    }
+//    var total = playTurn("Jai", 1);
 //    alert(points);
+
+
+// arguments 
+// x,y,radius, centerX, centerY, width, height,area, distance
+
+// //parameters 
+// width, height, x1,y1,x2,y2,r
+
+// //local 
+// dx,dy,d2,d,area
+
+// //global
+// area, distance, x,y,radius,width,height,centerY,centerX
+
+
+// function clunk(times) {
+//     var num = times;
+//     while (num > 0) {
+//     display("clunk");
+//     num = num - 1;
+//     }
+//    }
+//    function thingamajig(size) {
+//     var facky = 1;
+//     clunkCounter = 0;
+//     if (size == 0) {
+//     display("clank");
+//     } else if (size == 1) {
+//     display("thunk");
+//     } else {
+//     while (size > 1) {
+//     facky = facky * size;
+//     size = size - 1;
+//     }
+//     clunk(facky);
+//     }
+//    }
+//    function display(output) {
+//     console.log(output);
+//     clunkCounter = clunkCounter + 1;
+//    }
+//    var clunkCounter = 0;
+//    thingamajig(4);
+//    console.log(clunkCounter);
+
+var balance = 10500;
+var cameraOn = true;
+function steal(balance, amount) {
+ cameraOn = false;
+ if (amount < balance) {
+ balance = balance - amount;
+ }
+ return amount;  // Amount is only reurned 
+ cameraOn = true;  // This line wont be excuted 
+}
+var amount = steal(balance, 1250); // input amount itseld is returned here nothing is detucted from back account
+alert("Criminal: you stole " + amount + "!");
