@@ -43,7 +43,6 @@ Chapter 2 - Going futher
 5. Prompt - is used to get input from use to enter value
 6. alert - is used to show message to user 
 
-
 Chapter 3  - Functions
 
 1. Using functions we can write code that can be applied to all sorts of different circumstances. To be more clear using functions we can implement the code which is resuable, reused, managable, abstracted.
@@ -96,4 +95,3 @@ Chapter 3  - Functions
    local scope : speedlimit, i
 
 7.If you forget to declare a variable before using it, the variable will always be global (even if the first time you use it isin a function).
->>>>>>> proj26
