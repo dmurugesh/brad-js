@@ -122,5 +122,21 @@ Chapter 4 - Arrays
 8. Sparse arrays occur when there are undefined items in the middle of an array.
 9. You can add a new value to an array using push.
 
+Chapter 5 - Objectville
+
+1. An Object is nothing but collection of properties
+2. To access a property, use dot notation: the name of the variable containing the object, then a period, then the name of the property.
+3. Add new properties to object. 
+    var <objectname>.<propertyname> = "value"/number/function/boolean
+4. Delete operator is used to delete the property in a object
+    delete <objectname>.<propertyname>;
+5. When you pass an object to a function, the function gets a copy of the reference to the object, not a copy of the object itself. So, if you change the value of one of the object’s properties, it changes the value in the original object. 
+6. Object properties can contain functions. When a function is in an object, we call it a method.
+7. call a method : using the dot notation: the object name, a period, and the property name of the method, followed by parentheses.
+     <objectname>.property/method();
+8. A method is just like a function except that it is in an object
+9. To access an object’s properties in an object’s method, you must use dot notation, with this in place of the object’s name
+10.  Objects encapsulate, or hide, the complexity of the state and behavior in that object.
+
 
 
