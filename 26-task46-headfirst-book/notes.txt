@@ -138,7 +138,7 @@ Chapter 5 - Objectville
 9. To access an object’s properties in an object’s method, you must use dot notation, with this in place of the object’s name
 10.  Objects encapsulate, or hide, the complexity of the state and behavior in that object.
 
-Chapter - 6 
+Chapter 6 - Getting to know the DOM 
 
 1. Dom (Document Object Model) is the browsers internal representation of the web page.
 2. The DOM is created by browser and it loads and parses the HTML
@@ -152,4 +152,8 @@ Chapter - 6
 10. setAttribute - set the value of an element’s attributes
 11. If we put your code in a <script> element in the <head> of your page, you need to make sure we don’t try to modify the DOM until the page is fully loaded.
 12.A callback works like this: give a function to the object that knows about the event. 
+
+Chapter 7 - Serious Types 
+
+1. 
 
