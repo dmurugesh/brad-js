@@ -138,5 +138,18 @@ Chapter 5 - Objectville
 9. To access an object’s properties in an object’s method, you must use dot notation, with this in place of the object’s name
 10.  Objects encapsulate, or hide, the complexity of the state and behavior in that object.
 
+Chapter - 6 
 
+1. Dom (Document Object Model) is the browsers internal representation of the web page.
+2. The DOM is created by browser and it loads and parses the HTML
+3. We get access to DPM in Javascript code with the document object.
+4. The document object has properties and methods you can use to access and modify the DOM 
+5. document.getElementById is the method used to get element using id
+6. The document.getElementById method returns an element object that represents an element in your page. 
+7. The innerHTML - holds the content inside the element also the nested html content
+8. Modify the content of an element by changing the value of its innerHTML property.
+9. getAttribute -  get the value of an element’s attributes
+10. setAttribute - set the value of an element’s attributes
+11. If we put your code in a <script> element in the <head> of your page, you need to make sure we don’t try to modify the DOM until the page is fully loaded.
+12.A callback works like this: give a function to the object that knows about the event. 
 
