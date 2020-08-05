@@ -1,3 +1,5 @@
 1. Page 47 pesudo code  and flow chart
 2. Page 183 problem 
-3. string equation
+3. string equation 
+4. Page 217 state and behaviour
+5. 
