@@ -155,5 +155,33 @@ Chapter 6 - Getting to know the DOM
 
 Chapter 7 - Serious Types 
 
-1. 
+1.Two types in JAvascript - Primitive & objects
+  1.1 The primitives are: numbers, strings, booleans, null and undefined. Everything else is an object.
+  1.2 The elements other than primitive are objects
+2. Undefined mmeanst that a variable hasnt yet been intialized to a value
+3. null means "no object"
+4. NaN stands for "Not a number". the type of NaN is a number. NaN is a number that cannot be respresented in Javascript
+5. Nan Never equals any other value, including itself.
+6. Two types of equal operator equality operator(==) and Strict equality operator(===)
+7. Equality operator (==) -  If two operands have different types, the equality operator (==) will try to convert one of the operands into another type before testing for equality.  
+8. Strict equality operator(===) - If two operands have different types, the strict equality operator (===) returns false.
+9.  Type conversion is also used with other operators, like the arithmetic operators and string concatenation
+10. JavaScript has five falsey values: undefined, null, 0, “” (the empty string) and false. All other values are truthy.
+11. The string has many methods that are usefulfor string manipulation. 
+12. Length property : Which holds thenumber of characters in the string.
+13. indexOf - returns the index of the first occurence of that argument in the string
+14. substring Method - extract and return the string contained within them
+15. split method - takes of the character that acts as a delimiter and braks the string into parts based on delimiter
+16. tolowercase - converts the string letters into lowercase 
+17. lasIndexOf -  returns the index of the last occurence of that argument in the string
+18. match - Searches for matches in a string using regular expressions.
+19. trim() - Removes white space from the arround the string.
+20. slice - returns a new string that has part of the original string removed
+
+
+
+
+
+ 
+
 
