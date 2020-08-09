@@ -179,8 +179,13 @@ Chapter 7 - Serious Types
 20. slice - returns a new string that has part of the original string removed
 
 
-
-
+Chapter 8 - Building an App
+1. Always try to orgranize your code using object/array/etc.
+2. Make sure each property has one primary resposnbility
+3. Always try to print msg in a genral format. 
+4. Arrays have an indexOf method that is similar to the string indexOf method. The array indexOf method takes a value, and returns the index of that value if it exists in the array, or -1 if it does not.
+5. Alwasy break your problem into simpler steps and run code after you does each part and check if the output is correct
+6.  Quality assurance (QA) is an important part of developing your code. QA requires testing not just valid input, but invalid input as well.
 
  
 
