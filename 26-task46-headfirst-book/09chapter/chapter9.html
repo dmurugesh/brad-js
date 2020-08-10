@@ -17,16 +17,30 @@
 <head>
     <meta charset="utf-8">
     <title> I'm alive! </title>
-    <script>
-        window.onload = pageLoadedHandler;
-        function pageLoadedHandler() {
-            alert("I'm alive!");
-        }
-    </script>
+
 </head>
 
 <body>
     <h1>Event Handler</h1>
+    <script>
+        var tick = true;
+        function ticker() {
+            if (tick) {
+                console.log("Tick");
+                tick = false;
+            } else {
+                console.log("Tock");
+                tick = true;
+            }
+        }
+    
+        setInterval(ticker, 1000);
+
+        var t = setInterval(ticker, 1000);
+        clearInterval(t);
+        console.log(clearInterval);
+    </script>
+
 </body>
 
 </html>

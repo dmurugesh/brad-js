@@ -5,23 +5,56 @@
     <meta charset="utf-8">
     <title>Image Guess</title>
     <style>
-        body { margin: 20px; }
-        img { margin: 20px; }
+        body {
+            margin: 20px;
+        }
+
+        img {
+            margin: 20px;
+        }
     </style>
     <script>
         window.onload = init;
         function init() {
             var images = document.getElementsByTagName("img");
             console.log(images);
-            for(let i = 0; i < images.length; i++) {
-                images[i].onclick = showAnswer;
+            for (let i = 0; i < images.length; i++) {
+                images[i].onmouseover = showAnswer;
             }
         }
 
-        function showAnswer() {
-            var image = document.getElementById("zero");
-            image.src = "zero.jpg";
+        function showAnswer(eventObj) {
+            var image = eventObj.target;
+            console.log(image);
+            var name = image.id;
+            name = name + ".jpg";
+            image.src = name;
+            setTimeout(reblur, 2000, image);
+            final();
         }
+
+        function reblur(image) {
+            var name = image.id;
+            name = name + "blur.jpg";
+            image.src = name;
+        }
+
+        function final() {
+            var images = document.getElementsByTagName("img");
+            for (let i = 0; i < images.length; i++) {
+                images[i].onmouseleave = showBlur;
+            }
+        }
+
+        function showBlur(eventObj) {
+            var image = eventObj.target;
+            console.log(image);
+            var name = image.id;
+            name = name + "blur.jpg";
+            image.src = name;
+            init();
+        }
+
     </script>
 </head>
 
