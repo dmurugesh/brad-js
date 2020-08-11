@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chapter 9</h1>
+    <script src="chapter9.js"></script>
+</body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> I'm alive! </title>
+
+</head>
+
+<body>
+    <h1>Event Handler</h1>
+    <script>
+        var tick = true;
+        function ticker() {
+            if (tick) {
+                console.log("Tick");
+                tick = false;
+            } else {
+                console.log("Tock");
+                tick = true;
+            }
+        }
+    
+        setInterval(ticker, 1000);
+
+        var t = setInterval(ticker, 1000);
+        clearInterval(t);
+        console.log(clearInterval);
+    </script>
+
+</body>
+
+</html>
