@@ -187,6 +187,14 @@ Chapter 8 - Building an App
 5. Alwasy break your problem into simpler steps and run code after you does each part and check if the output is correct
 6.  Quality assurance (QA) is an important part of developing your code. QA requires testing not just valid input, but invalid input as well.
 
- 
+Chapter - 10 Functions
+1. Function can be declared in two types 
+   i) function declaration 
+   ii) function expression 
+2. A function reference is a value that refers to a function.
+3. Function declarations are handled before your code is evaluated.
+   Function expressions are evaluated at runtime with the rest of your code.
+4. When the browser evaluates a function declaration, it creates a function as well as a variable with the same name as the function, and stores the function reference in the variable.
+5. When the browser evaluates a function expression, it creates a function, and it’s up to you what to do with the function reference.
 
 
