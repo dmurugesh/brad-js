@@ -95,17 +95,17 @@ if (migrating) {
 // var result = whereAreYou();
 // console.log(result);
 
-var justAVar = "Oh, don't you worry about it, I'm GLOBAL";
-function whereAreYou() {
-    var justAVar = "Just an every day LOCAL";
-    function inner() {
-        return justAVar;
-    }
-    return inner;
-}
-var innerFunction = whereAreYou();
-var result = innerFunction();
-console.log(result);
+// var justAVar = "Oh, don't you worry about it, I'm GLOBAL";
+// function whereAreYou() {
+//     var justAVar = "Just an every day LOCAL";
+//     function inner() {
+//         return justAVar;
+//     }
+//     return inner;
+// }
+// var innerFunction = whereAreYou();
+// var result = innerFunction();
+// console.log(result);
 
 // function makeCounter() {
 //     var count = 0;
@@ -122,14 +122,63 @@ console.log(result);
 //    console.log(doCount());
 
 
-   function makeCounter() {
+function makeCounter() {
     var count = 0;
-    return function() {
-            count++;
-            return count;
-        }
+    return function () {
+        count++;
+        return count;
+    }
 }
 var counter = makeCounter();
 console.log(counter());
 console.log(counter());
 console.log(counter());
+
+var justAVar = "Oh, don't you worry about it, I'm GLOBAL";
+function whereAreYou() {
+    var justAVar = "Just an every day LOCAL";
+    function inner() {
+        return justAVar;
+    }
+    return inner;
+}
+var innerFunction = whereAreYou();
+var result = innerFunction();
+console.log(result);
+
+
+// function justSayin(phrase) {
+//     var ending = "";
+//     if (beingFunny) {
+//         ending = " -- I'm just sayin!";
+//     } else if (notSoMuch) {
+//         ending = " -- Not so much.";
+//     }
+//     alert(phrase + ending);
+// }
+
+// console.log(justSayin("Hello"));
+
+function multN(n) {
+    return function multBy(m) {
+        console.log(m);
+        return n * m;
+
+    };
+}
+var multBy3 = multN(3);
+console.log("Multiplying 2: " + multBy3(2));
+console.log("Multiplying 3: " + multBy3(3));
+
+function makeCounter() {
+    var count = 0;
+    function counter() {
+        count = count + 1;
+        return count;
+    }
+    return counter;
+}
+var doCount = makeCounter();
+console.log(doCount());
+console.log(doCount());
+console.log(doCount());
