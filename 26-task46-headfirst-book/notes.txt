@@ -197,4 +197,15 @@ Chapter - 10 Functions
 4. When the browser evaluates a function declaration, it creates a function as well as a variable with the same name as the function, and stores the function reference in the variable.
 5. When the browser evaluates a function expression, it creates a function, and it’s up to you what to do with the function reference.
 
-
+Chapter 11 Serious function 
+1. An anonymous function is a function that has no name
+2. Anonyms functions can make your code more concise 
+3. Function declaration is defined before the rest of the code is evaluated and Function expression is evaluated at runtime with rest of your code and so in not defined until the statement in which it appears is evaluated
+4. We can pass function expression to another function or return a function expression from a function 
+5. Function expression evaluates to a function reference so you can use a function expression anywhere we use a function reference 
+6. Nested function are function defined inside another function, Nested function has local scope just like other local variabes.
+7. Lexical Scope means that we can determine the scope of a variable by reading a code 
+8. To blind the value of a variable in aa= nested function use the value thats defined in the closet enclosing function. If no value is found then look into global scope
+9. Closures are a function along with a referencing environment. A closure captures the value of variables in scope at the time the closure is created.
+10. Free variables in the body of a function are variables that are not bound in the body of that function.
+11. Closures are often used to capture state for event handlers. 
