@@ -62,10 +62,10 @@ Dog.prototype.sit = function () {
     }
 };
 barnaby.sit();
-barnaby.sit()
-barnaby.sit()
-spot.sit()
-spot.sit()
+barnaby.sit();
+barnaby.sit();
+spot.sit();
+spot.sit();
 
 // //Page 579
 
