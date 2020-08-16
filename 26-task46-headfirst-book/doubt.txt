@@ -4,7 +4,7 @@
 4. Page 217 state and behaviour
 5. Page 295 substring (10, 15) clarified after reading page 299
 6. How can we say two objects are equal Clarified by Allen on 9th August
-7. pg: 454: What is the advantage of doing programing using return function from a function
+7. pg: 454: What is the advantage of doing programing using return function from a function - call back function 
 8. return function  using () in problem - solved reading chapter 11
 9. pg 444 checknofly - bug 
 10. closure in pg 495 
