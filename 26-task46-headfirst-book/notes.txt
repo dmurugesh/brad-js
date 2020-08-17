@@ -209,3 +209,13 @@ Chapter 11 Serious function
 9. Closures are a function along with a referencing environment. A closure captures the value of variables in scope at the time the closure is created.
 10. Free variables in the body of a function are variables that are not bound in the body of that function.
 11. Closures are often used to capture state for event handlers. 
+
+Chapter 12 & 13 
+1. A closure is a function together with a referencing environment.
+constructors - new
+1. The first thing new does is create a new, empty object:
+2. Next, new sets this to point to the new object.
+3. With this set up, we now call the function.
+4. Each time you call a constructor using the new operator, you are creating a new instance of an object.
+5. The hasOwnProperty method returns true if a property is defined in an object instance.
+6.  Object is the object that all prototypes and instances ultimately inherit from
