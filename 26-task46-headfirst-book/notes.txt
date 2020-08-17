@@ -218,3 +218,4 @@ constructors - new
 3. With this set up, we now call the function.
 4. Each time you call a constructor using the new operator, you are creating a new instance of an object.
 5. The hasOwnProperty method returns true if a property is defined in an object instance.
+6.  Object is the object that all prototypes and instances ultimately inherit from
