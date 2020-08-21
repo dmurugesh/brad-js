@@ -1,0 +1,107 @@
+*{
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.container{
+    padding: 3em 2em;
+    border-collapse: collapse;
+}
+
+.container-inside1{
+    display: flex;
+}
+
+.container-inside1 > div{
+    margin: 1%;
+    border: 1px solid black;
+}
+
+.container-inside-img{
+    height: 200px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.imgrat{
+    height: 150px!important;
+    overflow: hidden;
+}
+
+.blue{
+    color: blue;
+}
+
+.img{
+    height: 130%;
+    width: 110%;
+}
+
+.img2{
+    width: 100%;
+    height: 130%;
+}
+
+.container-inside-wordsbelowflex{
+    align-content: center;
+    margin-top: 5px;
+    position: relative;
+    width: 30%;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+#new-business-image1, #new-business-image2, #new-business-image3  {
+    cursor: pointer;
+}
+.container-inside-wordsbelow{
+    margin-bottom: 0;
+}
+
+ #rating-img1, #rating-img2, #rating-img3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.container-inside-wordsbelowflex::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #ccc;
+    
+} 
+
+#rating-img1::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: red;
+} 
+
+#rating-img2::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: red;
+} 
+
+#rating-img3::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: red;
+} 
+
+#finalw1, #finalw2, #finalw3{
+    color: tomato;
+}
+
+#reviews1, #reviews2, #reviews3{
+    color:grey;
+    position: relative;
+    left: 110px;
+    bottom: 17px;
+}

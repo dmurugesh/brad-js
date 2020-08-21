@@ -1,0 +1,20 @@
+[
+    {
+        "id" : 1,
+        "reviews" : 40,
+        "days" : 14,
+        "stars" : 4
+    },
+    {
+        "id" : 2,
+        "reviews" : 88,
+        "days" : 14,
+        "stars" : 1
+    },
+    {
+        "id" : 3,
+        "reviews" : 77,
+        "days" : 25,
+        "stars" : 2
+    }
+]
