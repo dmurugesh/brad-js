@@ -27,7 +27,8 @@ function myFunction3() {
 
 
 // Extract data from JSON
-//  Elements in filter place
+//  Elements in filter place according to place
+
 async function filterPlaces() {
     const response = await fetch('data.json');
     const data = await response.json();
