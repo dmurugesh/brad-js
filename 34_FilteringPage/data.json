@@ -9,7 +9,7 @@
                 "property-image": "img/item-2.png",
                 "legal-status": "90",
                 "property-type": "Community Living",
-                "plot-availability": "2",
+                "plot-availability": "5",
                 "current-project-status": "Completed"
             }, 
             {
@@ -20,7 +20,7 @@
                 "property-image": "img/item-3.png",
                 "legal-status": "90",
                 "property-type": "Homestead",
-                "plot-availability": "2",
+                "plot-availability": "4",
                 "current-project-status": "Completed"
             },
             {
@@ -97,7 +97,7 @@
                 "property-image": "img/item-3.png",
                 "legal-status": "90",
                 "property-type": "Short Term Lease",
-                "plot-availability": "2",
+                "plot-availability": "8",
                 "current-project-status": "Completed"
             }
         ]
