@@ -215,4 +215,52 @@ basic math operators are
     birthday.setMinutes(30);     => Set the Minutes
     birthday.setSeconds(25);     => Get the seconds
         
+# JAVASCRIPT 
+
+## 01 JavaScript Fundementals
+
+**console.log()** - log to the console eg: console.log('123);
+
+**console.table()** - print a table with the given values eg: console.log({a:1, b:3});
+
+**console.error()** - log a error message in the console eg: console.log('this is aerror message')
+
+**console.warn()** - log a warning message in the console  eg:console.warn('This is a warning message');
+
+## Variables 
+
+1. In Var / let we can reassign the variables whenever we needed in code, Whereas in const we cannot be reassign the variable in the code.
+2. variables contains letters, numbers, _, $
+3. variables cannot start with numbers
+4. Multi word vars 
+    i) var firstName = 'John'; //Camel Case 
+   ii) var first-name = 'Sara'; //Underscore
+  iii) var FirstName = 'Tom'; //Pascal case  
+5. Variables - let, var can be reassigned, Whereas const cannot be reassigned
+6. 
+
+## Data Types
+
+1. Primitive data types
+    sorted directly in the location the variable accesses 
+    sorted on the stack
+    types 
+    6 Types of data types 
+     i) String
+    ii) NUmber 
+   iii) Boolean 
+    iv) Null 
+     v) undefined 
+    vi) Symbols (ES6)
+2. Reference Data Types
+    Asscesed by reference 
+    Objects that are stored on the heap
+    A pointer to a location in memory 
+    types
+    i) Arrays 
+   ii) Object literals 
+  iii)Functions
+  iv) Dates
+   v) Anything Else  
+
 
